@@ -6,13 +6,13 @@ on:
   workflow_dispatch:
 
 jobs:
-  gke:
+  k8s:
     runs-on: ubuntu-latest
     steps:
     - uses: guilhem/rss-issues-action@0.1.0
       with:
         repo-token: ${{ secrets.GITHUB_TOKEN }}
         feed: "https://kubernetes.io/feed.xml"
-        characterLimit: "100"
+        characterLimit: "255"
         dry-run: "false"
         lastTime: "360h"
