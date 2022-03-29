@@ -2,7 +2,7 @@ name: rss
 
 on:
   schedule:
-  - cron: '0 * * * *'
+  - cron: '0 18 * * *'
 
 jobs:
   gke:
@@ -14,4 +14,4 @@ jobs:
         feed: "https://kubernetes.io/feed.xml"
         characterLimit: "100"
         dry-run: "false"
-        lastTime: "24h"
+        lastTime: "360h"
