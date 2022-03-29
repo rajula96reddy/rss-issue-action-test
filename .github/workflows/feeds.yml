@@ -16,3 +16,4 @@ jobs:
         characterLimit: "255"
         dry-run: "false"
         lastTime: "360h"
+        labels: "k8s/blog"
