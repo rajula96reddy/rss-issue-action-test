@@ -1,0 +1,17 @@
+name: rss
+
+on:
+  schedule:
+  - cron: '0 * * * *'
+
+jobs:
+  gke:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: guilhem/rss-issues-action@0.1.0
+      with:
+        repo-token: ${{ secrets.GITHUB_TOKEN }}
+        feed: "https://kubernetes.io/feed.xml"
+        characterLimit: "100"
+        dry-run: "false"
+        lastTime: "24h"
