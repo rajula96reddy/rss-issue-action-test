@@ -14,5 +14,6 @@ jobs:
         repo-token: ${{ secrets.GITHUB_TOKEN }}
         feed: "https://kubernetes.io/feed.xml"
         dry-run: "false"
-        lastTime: "360h"
+        characterLimit: "250"
+        lastTime: "720h"
         labels: "k8s/blog"
